@@ -1,30 +1,16 @@
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let n = +input[0]
-  let mt = []
-  for(let i = 1; i <= n; i++) {
-      let row = input[i].trim().split(' ').map(Number)
-      mt.push(row)
-  }  
-  let d1 = 0;
-  let d2 = 0;
-  for(let i = 0; i < n; i++) {
-      for(let j = 0; j < n; j++) {
-        if(i == j){
-            d1 += mt[i][j];
-        }
-        if(i + j == mt[i].length-1){
-            d2 += mt[i][j];
-        }
-      }
-  }
-  console.log(Math.abs(d1 - d2));
+    console.log(input)
  }
  if (process.env.USERNAME === "awdhesh") {
-   runProgram(`3
-   11 2 4
-   4 5 6
-   10 8 -12`);
+   runProgram(`4
+   aba
+   baba
+   aba
+   xzxb
+   3
+   aba
+   xzxb
+   ab`);
  } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");
@@ -43,3 +29,4 @@ function runProgram(input) {
      process.exit(0);
    });
  }
+
